@@ -1,0 +1,28 @@
+.datos-personales {
+display: flex;
+align-items: center;
+background-color: #ffffff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+.perfil-img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+margin-right: 20px;
+object-fit: cover;
+}
+
+.info-personal h1 {
+margin: 0 0 10px 0;
+color: #333;
+}
+
+.info-personal p {
+margin: 5px 0;
+color: #666;
+}
+
