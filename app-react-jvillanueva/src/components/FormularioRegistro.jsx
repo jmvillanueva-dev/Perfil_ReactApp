@@ -1,6 +1,9 @@
+// Estudiante: Jhonny Villanueva M.
+
 import React, { useState } from 'react';
 import './FormularioRegistro.css';
 
+// Define el componente funcional FormularioRegistro
 const FormularioRegistro = () => {
 // Estados para manejar los valores de cada campo
 const [nombre, setNombre] = useState('');
@@ -14,8 +17,8 @@ const [mensaje, setMensaje] = useState('');
 
 // Función para manejar el envío del formulario
 const handleSubmit = (e) => {
-e.preventDefault();
-setMensaje(
+e.preventDefault(); // Evita que la página se recargue al enviar el formulario
+setMensaje( // Actualiza el estado del mensaje con los datos ingresados
     `¡Gracias, ${nombre}!
     Tus datos han sido registrados.
     Materia: ${materia}
@@ -25,6 +28,7 @@ setMensaje(
 );
 };
 
+// Renderiza el formulario y el mensaje de confirmación
 return (
 <section className="formulario-registro">
     <h2 className="form-title">Registro de Estudiante</h2>
@@ -32,11 +36,12 @@ return (
         <h3 className="form-title">Formulario Registro</h3>
         <form onSubmit={handleSubmit} className="registration-form">
         <div className="form-group">
+            {/* Campo de nombre */}
             <label htmlFor="nombre">Nombre:</label>
             <input
             id="nombre"
             type="text"
-            value={nombre}
+            value={nombre} // Valor del campo controlado por el estado 'nombre'
             onChange={(e) => setNombre(e.target.value)}
             placeholder="Ingresa tu nombre"
             required
@@ -44,6 +49,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo de correo */}
             <label htmlFor="correo">Correo electrónico:</label>
             <input
             id="correo"
@@ -56,6 +62,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo de carrera */}
             <label htmlFor="carrera">Carrera:</label>
             <input
             id="carrera"
@@ -68,6 +75,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo de materia */}
             <label htmlFor="materia">Materia:</label>
             <input
             id="materia"
@@ -80,6 +88,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo de fecha */}
             <label htmlFor="fecha">Fecha de inscripción:</label>
             <input
             id="fecha"
@@ -91,6 +100,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo para número de créditos */}
             <label htmlFor="creditos">Número de créditos:</label>
             <input
             id="creditos"
@@ -103,6 +113,7 @@ return (
         </div>
 
         <div className="form-group">
+            {/* Campo ingreso de docente */}
             <label htmlFor="docente">Docente:</label>
             <input
             id="docente"
@@ -114,9 +125,11 @@ return (
             />
         </div>
 
+        {/* Botón de envío del formulario */}
         <button type="submit" className="submit-btn">Registrar</button>
         </form>
 
+        {/* Muestra el mensaje de confirmación si 'mensaje' no está vacío */}
         {mensaje && (
         <div className="confirmation-message">
             {mensaje}
@@ -128,4 +141,4 @@ return (
 );
 };
 
-export default FormularioRegistro;
+export default FormularioRegistro; // Exporta el componente para su uso en otros archivos

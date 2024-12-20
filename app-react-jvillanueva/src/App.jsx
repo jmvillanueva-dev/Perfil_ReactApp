@@ -1,3 +1,5 @@
+// Estudiante: Jhonny Villanueva M.
+
 import React from 'react'
 import DatosPersonales from './components/DatosPersonales'
 import EstudiosRealizados from './components/EstudiosRealizados'
