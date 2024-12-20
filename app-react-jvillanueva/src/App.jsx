@@ -4,6 +4,7 @@ import EstudiosRealizados from './components/EstudiosRealizados'
 import HerramientasUtilizadas from './components/HerramientasUtilizadas'
 import DeportesFavoritos from './components/DeportesFavoritos'
 import './App.css'
+import FormularioRegistro from './components/FormularioRegistro'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <EstudiosRealizados />
       <HerramientasUtilizadas />
       <DeportesFavoritos />
+      <FormularioRegistro />
     </div>
   )
 }
